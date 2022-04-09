@@ -24,7 +24,7 @@ const odds = [
 cells.forEach((cell, index) => {
     cell.addEventListener("click", (e)=> {
 
-        // if the cell is not empty >> return
+        // if the cell is not empty OR the game is not active >> return
         if(e.target.textContent !== "" || !isGameActive) return
 
         // showing to the board
@@ -48,7 +48,7 @@ const updateBoard = function(index){
 }
 
 const handleResult = function(){
-    let roundWon = false;
+    let roundWin = false;
 
     // compare between the odds and the board
     // to check if there a winner or not
@@ -61,14 +61,14 @@ const handleResult = function(){
         if(a === '' || b === '' || c === '') continue;
 
         if(a === b && b === c){
-            roundWon = true;
+            roundWin = true;
             isGameActive = false;
             break;
         }
     }
 
     // if the current player won
-    if(roundWon){
+    if(roundWin){
 
         // remove hidden class to show the result
         result.classList.remove("hidden");
@@ -102,7 +102,7 @@ btnReset.addEventListener("click", function(){
     // reset the board
     board = ["", "", "", "", "", "", "", "", ""];
 
-    // clear the class of cells
+    // clear the class's <player-X and player-O> from cells
     cells.forEach(cell => {
         cell.classList.remove("player-X");
         cell.classList.remove("player-O");
