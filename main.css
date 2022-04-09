@@ -27,9 +27,9 @@ body{
 
 .player-text{font-size: 25px;}
 
-.player-text .player-X{color: var(--green-color);}
+.player-X{color: var(--green-color);}
 
-.player-text .player-O{color: var(--blue-color);}
+.player-O{color: var(--blue-color);}
 
 
 .cells{
