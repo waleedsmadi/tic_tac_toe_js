@@ -1,6 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nova+Square&family=Open+Sans:ital,wght@0,300;0,500;1,600&display=swap');
+:root{
+    --green-color: #4EC477;
+    --blue-color: #458CF6;
+    --pink-color: #ED2362;
+}
+
 *{
     padding: 0;
     margin: 0;
     font-family: 'Nova Square', cursive;
 }
+
+body{
+    background-color: #111818;
+    color: white;
+}
+
+.wrapper{text-align: center;}
+
+.text-header{margin: 20px 0;}
+
+.text-header h1{
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.player-text{font-size: 25px;}
+
+.player-text .player-X{color: var(--green-color);}
+
+.player-text .player-O{color: var(--blue-color);}
+
+
+.cells{
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-auto-rows: minmax(120px, auto);
+    justify-content: center;
+    margin: 0 0 20px 0;
+}
+
+.cell{
+    border: 1px solid white;
+    font-size: 4rem;
+    line-height: 120px;
+}
+
+.btn{
+    margin: 20px 0;
+    background-color: var(--pink-color);
+    font-size: 20px;
+    padding: 8px;
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hidden{display: none;}
